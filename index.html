@@ -54,46 +54,59 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js'></script>
   <script src=""></script>
   <script>
-    let numberOne = 10;
-    let numberTwo = 5;
+    // let numberOne = 10;
+    // let numberTwo = 5;
     let btn1 = "Developer";
     let btn2 = "Sourov";
     
-
-    
-        // operetor With if else calculation
-
-         let operator = prompt("enter a operator: ", "");
-    // let numberOne = prompt("enter a first number: ", "");
-    // let numberTwo = prompt("enter a sec number: ", "");
-    if (operator === "+"){
-        result = numberOne + numberTwo;
-        console.log(result);
-        document.getElementById("oPerator").innerHTML = "+";
-    }
-    else if (operator === "-"){
-      result = numberOne - numberTwo;
-      console.log(result);
-      document.getElementById("oPerator").innerHTML = "-";
-    }
-    else if (operator === "/"){
-      result = numberOne / numberTwo;
-      console.log(result);
-      document.getElementById("oPerator").innerHTML = "/";
-    }
-    else if (operator === "*"){
-      result = numberOne * numberTwo;
-      console.log(result);
-      document.getElementById("oPerator").innerHTML = "*";
-    }
-    else{
-      console.log("please check your operetor");
-    }
-    document.getElementById("labelone").innerHTML = numberOne;
-    document.getElementById("labeltwo").innerHTML = numberTwo;
     document.getElementById("head-btn-1").innerHTML = btn1;
     document.getElementById("head-btn-2").innerHTML = btn2;
-    document.getElementById("result").innerHTML = result;
+    
+        // operetor With if else calculation
+// let numberOne = prompt("enter a first number: ", "");
+// let numberTwo = prompt("enter a sec number: ", "");
+
+// ------------------------------------------
+// operetor & Function With if else calculation
+// --------------------------------------------
+
+    let operator = prompt("enter a operator: ", "");
+    
+    function jsCal(numone,numtwo,operaTor){
+      let numberOne = numone;
+      let numberTwo = numtwo;
+      let calll = operaTor;
+      document.getElementById("labelone").innerHTML = numberOne;
+      document.getElementById("labeltwo").innerHTML = numberTwo;
+      
+      if (calll === "+"){
+          result = numberOne + numberTwo;
+          document.getElementById("result").innerHTML = result;
+          document.getElementById("oPerator").innerHTML = "+";
+      }
+      else if (calll === "-"){
+        result = numberOne - numberTwo;
+        document.getElementById("result").innerHTML = result;
+        document.getElementById("oPerator").innerHTML = "-";
+      }
+      else if (calll === "/"){
+        result = numberOne / numberTwo;
+        document.getElementById("result").innerHTML = result;
+        document.getElementById("oPerator").innerHTML = "/";
+      }
+      else if (calll === "*"){
+        result = numberOne * numberTwo;
+        document.getElementById("result").innerHTML = result;
+        document.getElementById("oPerator").innerHTML = "*";
+      }
+      else{
+        console.log("please check your operetor");
+      }
+    }
+    jsCal(30,3,operator)
+    
+    
+    
 </script>
 </body>
 
