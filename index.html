@@ -1,0 +1,100 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Basic calculator</title><script src="https://kit.fontawesome.com/825d68f42c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="stylee.css">
+  <link rel="icon" href="img/calculator_318-875894.png">
+</head>
+
+<body>
+  <div class="container">
+    <div class="head">
+        <div class="two_button">
+            <button class="head_btn_1" id="head-btn-1">Calculator</button>
+            <button class="head_btn_2" id="head-btn-2">Sourov</button>
+        </div>
+    </div>
+    <div class="result">
+        <div class="labels">
+            <span class="label-1" id="labelone">0</span>
+            <span class="label-2" id="oPerator"><i class="fa-solid fa-plus"></i></span>
+            <span class="label-3" id="labeltwo">0</span>
+        </div>
+      <p id="result">0</p>
+    </div>
+<div class="gape"></div>
+
+    <div class="buttons">
+      <div class="button action-btn black_btn" id="clear"> C </div>
+      <div class="button action-btn black_btn"> %</div>
+      <div class="button num-button  action-btn black_btn"> <i class="fas fa-backspace"></i></div>
+      <div class="button num-button  calc-action-btn black_btn"> <i class="fas fa-divide"></i></div>
+      <div class="button num-button seven">7</div>
+      <div class="button num-button eight">8</div>
+      <div class="button num-button  nine">9</div>
+      <div class="button num-button  calc-action-btn black_btn"><i class="fa-solid fa-xmark"></i></div>
+      <div class="button num-button  four">4</div>
+      <div class="button num-button  five">5</div>
+      <div class="button num-button  six">6</div>
+      <div class="button num-button  calc-action-btn black_btn">-</div>
+      <div class="button num-button  one">1</div>
+      <div class="button num-button  two">2</div>
+      <div class="button num-button  three">3</div>
+      <div class="button num-button  calc-action-btn black_btn">+</div>
+      <!-- <div class="button num-button  zero">0</div> -->
+      <div class="button num-button  two">00</div>
+      <div class="button num-button  three">0</div>
+      <div class="button num-button  point">.</div>
+      <div class="button calc-action-btn black_btn" id="total">=</div>
+    </div>
+
+  </div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.1.1/gsap.min.js'></script>
+  <script src=""></script>
+  <script>
+    let numberOne = 10;
+    let numberTwo = 5;
+    let btn1 = "Developer";
+    let btn2 = "Sourov";
+    
+
+    
+        // operetor With if else calculation
+
+         let operator = prompt("enter a operator: ", "");
+    // let numberOne = prompt("enter a first number: ", "");
+    // let numberTwo = prompt("enter a sec number: ", "");
+    if (operator === "+"){
+        result = numberOne + numberTwo;
+        console.log(result);
+        document.getElementById("oPerator").innerHTML = "+";
+    }
+    else if (operator === "-"){
+      result = numberOne - numberTwo;
+      console.log(result);
+      document.getElementById("oPerator").innerHTML = "-";
+    }
+    else if (operator === "/"){
+      result = numberOne / numberTwo;
+      console.log(result);
+      document.getElementById("oPerator").innerHTML = "/";
+    }
+    else if (operator === "*"){
+      result = numberOne * numberTwo;
+      console.log(result);
+      document.getElementById("oPerator").innerHTML = "*";
+    }
+    else{
+      console.log("please check your operetor");
+    }
+    document.getElementById("labelone").innerHTML = numberOne;
+    document.getElementById("labeltwo").innerHTML = numberTwo;
+    document.getElementById("head-btn-1").innerHTML = btn1;
+    document.getElementById("head-btn-2").innerHTML = btn2;
+    document.getElementById("result").innerHTML = result;
+</script>
+</body>
+
+</html>
